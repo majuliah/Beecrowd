@@ -62,13 +62,29 @@ namespace Exercice1000
             */
             
             //exercice 1008
-            WriteLine($"Enter with an ID, a total of hours and the value hour: ");
+            /*WriteLine($"Enter with an ID, a total of hours and the value hour: ");
             int id = int.Parse(ReadLine());
             double hours = double.Parse(ReadLine(), CultureInfo.InvariantCulture);
             double valueHour = double.Parse(ReadLine(), CultureInfo.InvariantCulture);
             WriteLine($"NUMBER = {id}" +
                       $"SALARY = {Exercice1008(id, hours, valueHour)}");
-                
+            */
+            
+            //exercice 1009
+            /*WriteLine($"Enter with an name, salary and, total of sells: ");
+            string name = ReadLine();
+            double salary = double.Parse(ReadLine(), CultureInfo.InvariantCulture);
+            double valueSells = double.Parse(ReadLine(), CultureInfo.InvariantCulture);
+            WriteLine($"Name = {name}" +
+                      $"SALARY = {Exercice1009(salary, valueSells).ToString($"F2", CultureInfo.InvariantCulture)}");
+            */
+            
+            //exercice1010
+            WriteLine($"Enter with a code, number os peaces and the value of each peace: ");
+            string[] values1 = ReadLine().Split(' ');
+            string[] values2 = ReadLine().Split(' ');
+            WriteLine($"VALUE TO PAY = R${Exercice1010(int.Parse(values1[1]),double.Parse(values1[2], CultureInfo.InvariantCulture), int.Parse(values2[1]), double.Parse(values2[2], CultureInfo.InvariantCulture))}");
+            
         }
         public static string Message()
         {
@@ -142,7 +158,17 @@ namespace Exercice1000
             double totalSalary = hour * valueHour;
             return totalSalary;
         }
+
+        public static double Exercice1009(double salary, double sells)
+        {
+            double totalSalary = salary + (sells * 0.15);
+            return totalSalary;
+        }
+        public static double Exercice1010(int number1, double value1, int number2, double value2)
+        {
+            double valueTotal = (number1 * value1) + (number2 * value2);
+            return valueTotal;
+        }
         
-       public static void Exercice1009(){}
     }
 }
