@@ -15,10 +15,19 @@ namespace Exercice1011
             */
             
             //exercice 1012
-            WriteLine($"A, B, C: ");
-            string[] calculos = ReadLine().Split(' ');
-            WriteLine(Exercice1012(double.Parse(calculos[0], CultureInfo.InvariantCulture),double.Parse(calculos[1], CultureInfo.InvariantCulture),double.Parse(calculos[2], CultureInfo.InvariantCulture)));
-
+            /*WriteLine($"A, B, C: ");
+            string[] abc;
+            abc = ReadLine().Split(' ');
+            double area = double.Parse(abc[0], CultureInfo.InvariantCulture);
+            double baseCalc = double.Parse(abc[1], CultureInfo.InvariantCulture);
+            double altura = double.Parse(abc[2], CultureInfo.InvariantCulture);
+            WriteLine($"{Exercice1012(area, baseCalc, altura)}");
+            */
+            
+            //exercice 1013
+            
+            
+            
         }
         static double Exercice1011(double ray)
         {
@@ -30,16 +39,16 @@ namespace Exercice1011
         static string Exercice1012(double area, double b, double altura)
         {
             double pi = 3.14159;
-            double trianguloRetangulo = b * altura / 2.0;
-            double circulo = altura * Math.Pow(pi, 2);
-            double trapezio = area + b * altura / 2.0;
-            double quadrado = Math.Pow(b, 2);
+            double trianguloRetangulo = (area * altura) / 2.0;
+            double circulo = pi * (Math.Pow(altura, 2.0));
+            double trapezio = (area + b) * (altura / 2.0);
+            double quadrado = Math.Pow(b, 2.0);
             double retangulo = area * b;
-            return ($"TRIANGULO: {trianguloRetangulo}" +
-                    $"CIRCULO: {circulo}" +
-                    $"TRAPEZIO: {trapezio}" +
-                    $"QUADRADO: {quadrado}" +
-                    $"RETANGULO: {retangulo}");
+            return ($"TRIANGULO: {trianguloRetangulo.ToString($"F2", CultureInfo.InvariantCulture)}" +
+                    $" CIRCULO: {circulo.ToString($"F4", CultureInfo.InvariantCulture)}" +
+                    $" TRAPEZIO: {trapezio.ToString($"F4", CultureInfo.InvariantCulture)}" +
+                    $" QUADRADO: {quadrado.ToString($"F4", CultureInfo.InvariantCulture)}" +
+                    $" RETANGULO: {retangulo.ToString($"F4", CultureInfo.InvariantCulture)}");
         }
         
         
