@@ -64,13 +64,73 @@ namespace Exercice1011
             */
             
             //ercice1017
-            WriteLine($"Enter with a spent time and avarege speed: ");
+            /*WriteLine($"Enter with a spent time and avarege speed: ");
             double time = double.Parse(ReadLine(), CultureInfo.InvariantCulture);
             double avaregeVelocity = double.Parse(ReadLine(), CultureInfo.InvariantCulture);
             
             WriteLine($"Total Litros: {Exercice1017(time, avaregeVelocity).ToString($"F3", CultureInfo.InvariantCulture)}");
+            */
+            
+            //exercice1018
+            /*WriteLine($"Enter with a number to convert: ");
+            int value = int.Parse(ReadLine());
+            WriteLine(Exercice1018(value));
+            */
+            
+            //exercice1019
+            /*
+            WriteLine($"Enter with a total of seconds to convert: "); 
+            int seconds = int.Parse(ReadLine());
+            WriteLine(Exercice1019(seconds));
+            */
+            
+            //exercice1020
+            WriteLine($"Enter with a total of days to convert");
+            int totalDays = int.Parse(ReadLine());
+            WriteLine(Exercice1020(totalDays));
+
         }
 
+        static string Exercice1020(int totalDays)
+        {
+            int totalYear, totalMonth, rest, days; 
+            totalYear = totalDays / 365;
+            rest = totalDays % 365;
+            totalMonth = rest / 30;
+            days = rest % 30;
+            
+            return ($"[{totalYear}] years, [{totalMonth}] months, [{days}] days");
+        }
+        static string Exercice1019(int seconds)
+        {
+            int hora, minuto, segundo, resto;
+
+            hora = seconds / 3600;
+            resto = seconds % 3600;
+            minuto = resto / 60;
+            segundo = resto % 60;
+            return ($"{hora}: {minuto}: {segundo}");
+        }
+        static string Exercice1018(int value)
+        {
+            int cem, cinquenta, vinte, dez, cinco, dois, resto;
+
+            cem = value / 100;
+            resto = value % 100;
+            cinquenta = resto / 50;
+            resto = resto % 50;
+            vinte = resto / 20;
+            resto = resto % 20;
+            dez = resto / 10;
+            resto = resto % 10;
+            cinco = resto / 5;
+            resto = resto % 5;
+            dois = resto / 2;
+            resto = resto % 2;
+            
+            return ($"100: {cem} notas\n 50: {cinquenta} notas\n 20: {vinte} notas\n 10: {dez} notas\n 5: {cinco} notas\n 2: {dois} notas\n");
+            
+        }
         static double Exercice1017(double time, double avaregeVelocity)
         {
             double kmPorLitro = 12.0;
