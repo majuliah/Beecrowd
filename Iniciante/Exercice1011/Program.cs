@@ -85,12 +85,101 @@ namespace Exercice1011
             */
             
             //exercice1020
-            WriteLine($"Enter with a total of days to convert");
+            /*WriteLine($"Enter with a total of days to convert");
             int totalDays = int.Parse(ReadLine());
             WriteLine(Exercice1020(totalDays));
-
+            */
+            
+            //exercice1035
+            /*WriteLine($"Enter with four numbers");
+            string[] numbers = ReadLine().Split(' ');
+            WriteLine(Exercice1035(int.Parse(numbers[0]),int.Parse(numbers[1]), int.Parse(numbers[2]), int.Parse(numbers[3])));
+            */
+            
+            //exercice1036
+            /*WriteLine($"Enter with three numbers");
+            string[] numbers = ReadLine().Split(' ');
+            WriteLine(Exercice1036(double.Parse(numbers[0], CultureInfo.InvariantCulture),double.Parse(numbers[1], CultureInfo.InvariantCulture), double.Parse(numbers[2], CultureInfo.InvariantCulture)));
+            */
+            
+            //exercice1037
+            WriteLine($"Enter with a number");
+            double number = double.Parse(ReadLine(), CultureInfo.InvariantCulture);
+            WriteLine($"{Exercice1037(number)}");
+            
         }
 
+        static string Exercice1037(double number)
+        {
+            string resposta = $" ";
+
+            if (number == 0.0 || number == 25.0)
+            {
+                resposta = $"Intervalo [0, 25]";
+                
+            }else if (number > 0.00 && number <= 25.00)
+            {
+                resposta = $"Intervalo (0, 25]";
+                
+            }else if (number > 25.00 && number < 50.00)
+            {
+                resposta = $"Intervalo (25, 50]";
+                
+            }else if (number == 50.00)
+            {
+                resposta = $"Intervalo [50, 75]";
+                
+            }else if (number > 50.00 && number <= 75.00)
+            {
+                resposta = $"Intervalo (50, 75]";
+                
+            }else if (number == 75.00 || number == 100.00)
+            {
+                resposta = $"Intervalo [75, 100]";
+                
+            }else if (number > 75.00 && number <= 100.00)
+            {
+                resposta = $"Intervalo (75, 100]";
+            }
+            else
+            {
+                resposta = $"Fora do intervalo";
+            }
+            return resposta;
+        }
+        static string Exercice1036(double valueA, double valueB, double valueC)
+        {
+            string resposta = " ";
+            double delta = Math.Pow(valueB, 2.0) - (4 * valueA * valueC);
+            double raiz = Math.Sqrt(delta);
+            double division = (2.0 * valueA);
+            double x1 = ((-valueB) + raiz) / division;
+            double x2 = ((-valueB) - raiz) / division;
+
+            if (division <= 0 || raiz < 0)
+                resposta = $"Impossivel Calcular";
+            else
+                resposta = ($"R1 = {x1.ToString($"F5", CultureInfo.InvariantCulture)} \n R2 = {x2.ToString($"F5", CultureInfo.InvariantCulture)}");
+            
+            return resposta;
+        }
+        static string Exercice1035(int value1, int value2, int value3, int value4)
+        {
+            string resposta = $"Valores não aceitos";
+            
+            if (value1 % 2 == 0)
+            {
+                if (value1 > 0 && value2 > 0 && value3 > 0 && value4 > 0)
+                {
+                    if (value2 > value3 && value4 > value1)
+                    {
+                        if (value3 + value4 > value1 + value2)
+                            resposta = $"Valores aceitos";
+                    }
+                }
+            }
+            return resposta;
+        }
         static string Exercice1020(int totalDays)
         {
             int totalYear, totalMonth, rest, days; 
