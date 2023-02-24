@@ -1,0 +1,16 @@
+C:\Users\majul\Documents\Beecrowd\Iniciante\Exercice1038\bin\Debug\net5.0\Exercice1038.exe
+C:\Users\majul\Documents\Beecrowd\Iniciante\Exercice1038\bin\Debug\net5.0\Exercice1038.deps.json
+C:\Users\majul\Documents\Beecrowd\Iniciante\Exercice1038\bin\Debug\net5.0\Exercice1038.runtimeconfig.json
+C:\Users\majul\Documents\Beecrowd\Iniciante\Exercice1038\bin\Debug\net5.0\Exercice1038.runtimeconfig.dev.json
+C:\Users\majul\Documents\Beecrowd\Iniciante\Exercice1038\bin\Debug\net5.0\Exercice1038.dll
+C:\Users\majul\Documents\Beecrowd\Iniciante\Exercice1038\bin\Debug\net5.0\ref\Exercice1038.dll
+C:\Users\majul\Documents\Beecrowd\Iniciante\Exercice1038\bin\Debug\net5.0\Exercice1038.pdb
+C:\Users\majul\Documents\Beecrowd\Iniciante\Exercice1038\obj\Debug\net5.0\Exercice1038.csproj.AssemblyReference.cache
+C:\Users\majul\Documents\Beecrowd\Iniciante\Exercice1038\obj\Debug\net5.0\Exercice1038.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\majul\Documents\Beecrowd\Iniciante\Exercice1038\obj\Debug\net5.0\Exercice1038.AssemblyInfoInputs.cache
+C:\Users\majul\Documents\Beecrowd\Iniciante\Exercice1038\obj\Debug\net5.0\Exercice1038.AssemblyInfo.cs
+C:\Users\majul\Documents\Beecrowd\Iniciante\Exercice1038\obj\Debug\net5.0\Exercice1038.csproj.CoreCompileInputs.cache
+C:\Users\majul\Documents\Beecrowd\Iniciante\Exercice1038\obj\Debug\net5.0\Exercice1038.dll
+C:\Users\majul\Documents\Beecrowd\Iniciante\Exercice1038\obj\Debug\net5.0\ref\Exercice1038.dll
+C:\Users\majul\Documents\Beecrowd\Iniciante\Exercice1038\obj\Debug\net5.0\Exercice1038.pdb
+C:\Users\majul\Documents\Beecrowd\Iniciante\Exercice1038\obj\Debug\net5.0\Exercice1038.genruntimeconfig.cache
