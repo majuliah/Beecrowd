@@ -10,17 +10,43 @@ namespace Exercice1038
         static void Main(string[] args)
         {
             //Exercice1038
-            Menu();
+            /*Menu();
             string[] answer = ReadLine().Split(' ');
             int order = int.Parse(answer[0]);
             int quantity = int.Parse(answer[1]);
             WriteLine($"{Exercice1038(order, quantity)}");
+            */
             
             //Exercice1039
-        }
-        static void Exercice103()
-        {
+            WriteLine($"Enter with 4 numbers for the students note:");
+            string[] notas = ReadLine().Split(' ');
+            WriteLine($"{Exercice1040(double.Parse(notas[0]), double.Parse(notas[1]), double.Parse(notas[2]),double.Parse(notas[3]))}");
             
+        }
+        static string Exercice1040(double n1, double n2, double n3, double n4)
+        {
+            double primeiraMedia = (n1 * 2.0 + n2 * 3.0 + n3 * 4.0 + n4 * 1.0) / 10.0;
+            string answer = " ";
+            double segundaMedia = 0.0;
+            
+            if (primeiraMedia >= 7.0 & primeiraMedia <= 10.0)
+                answer = $"Média: {primeiraMedia.ToString($"F2", CultureInfo.InvariantCulture)} \nAluno Aprovado!";
+            else if (primeiraMedia < 5.0 & primeiraMedia > 0.0)
+                answer = $"Média: {primeiraMedia.ToString($"F2", CultureInfo.InvariantCulture)} \nAluno Reprovado!";
+            else
+            {
+                WriteLine($"Aluno em exame. \nNota do Exame:");
+                segundaMedia = double.Parse(ReadLine(), CultureInfo.InvariantCulture);
+                double calculoFinal = (primeiraMedia + segundaMedia) / 2.0;
+                
+                if (calculoFinal >= 5.0 & calculoFinal <= 10.0)
+                    answer =
+                        $"Aluno aprovado.\nMédia Final: {calculoFinal.ToString($"F2", CultureInfo.InvariantCulture)}";
+                else
+                    answer = $"Aluno reprovado com média final.\nMédia Final: {calculoFinal.ToString($"F2", CultureInfo.InvariantCulture)}";
+                
+            }
+            return answer;
         }   
 
         static void Menu()
