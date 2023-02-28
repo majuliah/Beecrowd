@@ -17,12 +17,38 @@ namespace Exercice1038
             WriteLine($"{Exercice1038(order, quantity)}");
             */
             
-            //Exercice1039
-            WriteLine($"Enter with 4 numbers for the students note:");
+            //Exercice1040
+            /*WriteLine($"Enter with 4 numbers for the students note:");
             string[] notas = ReadLine().Split(' ');
             WriteLine($"{Exercice1040(double.Parse(notas[0]), double.Parse(notas[1]), double.Parse(notas[2]),double.Parse(notas[3]))}");
+            */
+            
+            //Exercice1041
+            WriteLine($"Enter with X and Y numbers");
+            string[] xAndY = ReadLine().Split();
+            WriteLine($"{Exercice1041(double.Parse(xAndY[0]), double.Parse(xAndY[1]))}");
             
         }
+
+        static string Exercice1041(double eixoX, double eixoY)
+        {
+            string result = $" ";
+
+            if (eixoX == 0.0 && eixoY == 0.0)
+                result = $"Origem";
+            else if (eixoX > 0.0 & eixoY > 0.0)
+                result = $"Q1";
+            else if (eixoX < 0.0 & eixoY > 0.0)
+                result = $"Q2";
+            else if (eixoX > 0.0 & eixoY < 0.0)
+                result = $"Q4";
+            else
+                result = $"Q3";
+            return result;
+        }
+        
+        
+        
         static string Exercice1040(double n1, double n2, double n3, double n4)
         {
             double primeiraMedia = (n1 * 2.0 + n2 * 3.0 + n3 * 4.0 + n4 * 1.0) / 10.0;
