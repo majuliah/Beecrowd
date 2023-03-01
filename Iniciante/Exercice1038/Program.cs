@@ -45,10 +45,9 @@ namespace Exercice1038
             else
                 result = $"Q3";
             return result;
+        
         }
-        
-        
-        
+
         static string Exercice1040(double n1, double n2, double n3, double n4)
         {
             double primeiraMedia = (n1 * 2.0 + n2 * 3.0 + n3 * 4.0 + n4 * 1.0) / 10.0;
