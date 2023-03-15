@@ -24,10 +24,60 @@ namespace Exercice1038
             */
             
             //Exercice1041
-            WriteLine($"Enter with X and Y numbers");
+            /*WriteLine($"Enter with X and Y numbers");
             string[] xAndY = ReadLine().Split();
             WriteLine($"{Exercice1041(double.Parse(xAndY[0]), double.Parse(xAndY[1]))}");
+            */
             
+            //Exercice1042
+            WriteLine($"Enter with three numbers");
+            string[] numbers = ReadLine().Split(' ');
+            WriteLine($"{Exercice1042(int.Parse(numbers[0]), int.Parse(numbers[1]), int.Parse(numbers[2]))}");
+            
+        }
+        static string Exercice1042(int number1, int number2, int number3)
+        {
+            int maior = 0;
+            int meio = 0;
+            int menor = 0;
+            
+            if (number1 > number2 && number1 > number3)
+            {
+                maior = number1;
+                if (number2 > number3)
+                {
+                    meio = number2;
+                    menor = number3;
+                }
+                else
+                {
+                    meio = number3;
+                    menor = number2;
+                }
+            }
+            else
+            {
+                menor = number1;
+                if (number2 > number3)
+                {
+                    maior = number2;
+                    meio = number3;
+                }
+                else
+                {
+                    maior = number3;
+                    meio = number2;
+                }
+            }
+
+            return $"{menor}\n{meio}\n{maior}\n\n\n{number1}\n{number2}\n{number3}";
+
+        }     
+        static double Exercice1013(double value1, double value2, double value3)
+        {
+            double maiorAB = (value1 + value2 + Math.Abs(value1 - value2)) / 2.0;
+            double maiorABC = (maiorAB + value3 + Math.Abs(maiorAB - value3)) / 2.0;
+            return maiorABC;
         }
 
         static string Exercice1041(double eixoX, double eixoY)
@@ -120,10 +170,7 @@ namespace Exercice1038
         }    
         
      
-        static void Exercice10()
-        {
-            
-        }        
+   
         static void Exercice1()
         {
             
