@@ -30,11 +30,39 @@ namespace Exercice1038
             */
             
             //Exercice1042
-            WriteLine($"Enter with three numbers");
+            /*WriteLine($"Enter with three numbers");
             string[] numbers = ReadLine().Split(' ');
             WriteLine($"{Exercice1042(int.Parse(numbers[0]), int.Parse(numbers[1]), int.Parse(numbers[2]))}");
+            */
+            
+            //Exercice 1043
+            WriteLine($"Entre com três valores:");
+            string[] numbers = ReadLine().Split(' ');
+            WriteLine($"{Exercice1043(double.Parse(numbers[0], CultureInfo.InvariantCulture), double.Parse(numbers[1], CultureInfo.InvariantCulture), double.Parse(numbers[2], CultureInfo.InvariantCulture))}");
             
         }
+        static void Exercice1044()
+        {
+            
+        }
+        static string Exercice1043(double value1, double value2, double value3)
+        {
+            double resultado = 0.0;
+            string resposta = "";
+            
+            if (value1 >= value2 + value3)
+            {
+                resultado = ((value1 + value2) * value3) / 2.0;
+                resposta = $"Area = {resultado.ToString("F2", CultureInfo.InvariantCulture)}";
+            }
+            else
+            {
+                resultado = (value1 + value2 + value3);
+                resposta = $"Perímetro = {resultado.ToString("F2", CultureInfo.InvariantCulture)}";
+            }
+
+            return resposta;
+        }  
         static string Exercice1042(int number1, int number2, int number3)
         {
             int maior = 0;
@@ -79,6 +107,7 @@ namespace Exercice1038
             double maiorABC = (maiorAB + value3 + Math.Abs(maiorAB - value3)) / 2.0;
             return maiorABC;
         }
+
 
         static string Exercice1041(double eixoX, double eixoY)
         {
@@ -167,17 +196,6 @@ namespace Exercice1038
 
             double total = quantity * value;
             return $"Total: {total.ToString($"F2", CultureInfo.InvariantCulture)}";
-        }    
-        
-     
-   
-        static void Exercice1()
-        {
-            
-        }        
-        static void Exercice()
-        {
-            
         }
     }
 }
