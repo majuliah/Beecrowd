@@ -36,14 +36,34 @@ namespace Exercice1038
             */
             
             //Exercice 1043
-            WriteLine($"Entre com três valores:");
+            /*WriteLine($"Entre com três valores:");
             string[] numbers = ReadLine().Split(' ');
             WriteLine($"{Exercice1043(double.Parse(numbers[0], CultureInfo.InvariantCulture), double.Parse(numbers[1], CultureInfo.InvariantCulture), double.Parse(numbers[2], CultureInfo.InvariantCulture))}");
+            */
             
+            //Exercice 1044
+            /*WriteLine($"Entre com dois inteiros");
+            string[] numbers = ReadLine().Split(' ');
+            WriteLine($"{Exercice1044(int.Parse(numbers[0]), int.Parse(numbers[1]))}");
+            */
         }
-        static void Exercice1044()
+        static string Exercice1044(int valor1, int valor2)
         {
-            
+            string resposta = " ";
+            int divisao = 0;
+
+            if (valor1 > valor2)
+                divisao = valor1 % valor2;
+            else
+                divisao = valor2 % valor1;
+
+            if (divisao == 0)
+                resposta = $"São múltiplos";
+            else
+                resposta = $"Não são múltiplos";
+
+            return resposta;
+
         }
         static string Exercice1043(double value1, double value2, double value3)
         {
