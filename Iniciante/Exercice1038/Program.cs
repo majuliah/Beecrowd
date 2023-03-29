@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.ComponentModel.Design;
 using System.Globalization;
 using static System.Console;
@@ -46,6 +47,77 @@ namespace Exercice1038
             string[] numbers = ReadLine().Split(' ');
             WriteLine($"{Exercice1044(int.Parse(numbers[0]), int.Parse(numbers[1]))}");
             */
+            
+            //Exercice 1045
+            WriteLine($"Entre com três valores:");
+            string[] numbers = ReadLine().Split(' ');
+            WriteLine($"{Exercice1045(double.Parse(numbers[0], CultureInfo.InvariantCulture), double.Parse(numbers[1], CultureInfo.InvariantCulture), double.Parse(numbers[2], CultureInfo.InvariantCulture))}");
+            
+        }
+
+        static string Exercice1045(double a, double b, double c)
+        {
+            double maior = 0.0, meio = 0.0, menor = 0.0;
+            string resposta = " ";
+            
+            if (a > b && a > c)
+            {
+                maior = a;
+                if (b > c)
+                {
+                    meio = b;
+                    menor = c;
+                }
+                else
+                {
+                    meio = c;
+                    menor = b;
+                }
+            }else if (b > a && b > c )
+            {
+                maior = b;
+                if (a > c)
+                {
+                    meio = a;
+                    menor = c;
+                }
+                else
+                {
+                    meio = c;
+                    menor = a;
+                }
+            }
+            else
+            {
+                maior = c;
+                if (a > b)
+                {
+                    meio = a;
+                    menor = b;
+                }
+                else
+                {
+                    meio = b;
+                    menor = a;
+                }
+            }
+
+            if (maior >= (meio + menor))
+              return resposta = "Não forma triângulo";
+            
+            if (Math.Pow(maior, 2.0) == Math.Pow(meio, 2.0) + Math.Pow(menor, 2.0))
+                resposta += "Triângulo retângulo\n";
+            if (Math.Pow(maior, 2.0) > Math.Pow(meio, 2.0) + Math.Pow(menor, 2.0))
+                resposta += "Triângulo obtusângulo\n";
+            if (Math.Pow(maior, 2.0) < Math.Pow(meio, 2.0) + Math.Pow(menor, 2.0))
+                resposta += "Triângulo acutângulo\n";
+            
+            if (maior == meio && meio == menor)
+                resposta += "Triângulo equilátero\n";
+            else if (maior == menor || maior == meio || meio == menor)
+                resposta += "Triângulo Isoceles\n";
+
+            return resposta;
         }
         static string Exercice1044(int valor1, int valor2)
         {
