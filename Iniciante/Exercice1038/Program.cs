@@ -49,10 +49,63 @@ namespace Exercice1038
             */
             
             //Exercice 1045
-            WriteLine($"Entre com três valores:");
+            /*WriteLine($"Entre com três valores:");
             string[] numbers = ReadLine().Split(' ');
             WriteLine($"{Exercice1045(double.Parse(numbers[0], CultureInfo.InvariantCulture), double.Parse(numbers[1], CultureInfo.InvariantCulture), double.Parse(numbers[2], CultureInfo.InvariantCulture))}");
+            */
             
+            //Exercice1048
+            WriteLine($"Entre com o salário:");
+            double salario = double.Parse(ReadLine(), CultureInfo.InvariantCulture);
+            WriteLine($"{Exercice1048(salario)}");
+        }
+
+        static string Exercice1048(double salario)
+        {
+            string resposta = "";
+            int reajuste;
+            double reajusteGanho = 0.0;
+            
+            if (salario <= 400.00)
+            {
+                reajusteGanho = salario * 0.15;
+                salario += reajusteGanho;
+                reajuste = 15;
+            }
+            else if (salario > 400.00 && salario<= 800.00)
+            {
+                reajusteGanho = salario * 0.12;
+                salario += reajusteGanho;
+                reajuste = 12;
+            }
+            else if (salario > 800.00 && salario <= 1200.00)
+            {
+                reajusteGanho = salario * 0.10;
+                salario += reajusteGanho;
+                reajuste = 10;
+            }
+            else if (salario > 1200.00 && salario <= 2000.00)
+            {
+                reajusteGanho = salario * 0.07;
+                salario += reajusteGanho;
+                reajuste = 7;
+            }
+            else
+            {
+                reajusteGanho = salario * 0.04;
+                salario += reajusteGanho;
+                reajuste = 4;
+            }
+
+            resposta = $"Novo salario: {salario.ToString("F2", CultureInfo.InvariantCulture)}\n" +
+                       $"Reajuste ganho: {reajusteGanho.ToString("F2", CultureInfo.InvariantCulture)}\n" +
+                       $"Em percentual: {reajuste}%";
+            return resposta;
+        }
+
+        static string Exercice1047(int hora, int minuto, int horaInicio, int fimMinuto)
+        {
+            return $"abc";
         }
 
         static string Exercice1045(double a, double b, double c)
