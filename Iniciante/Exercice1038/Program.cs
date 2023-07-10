@@ -54,10 +54,34 @@ namespace Exercice1038
             WriteLine($"{Exercice1045(double.Parse(numbers[0], CultureInfo.InvariantCulture), double.Parse(numbers[1], CultureInfo.InvariantCulture), double.Parse(numbers[2], CultureInfo.InvariantCulture))}");
             */
             
+            //Exercice1047
+            WriteLine(Exercice1047());
+
             //Exercice1048
-            WriteLine($"Entre com o salário:");
+            /*WriteLine($"Entre com o salário:");
             double salario = double.Parse(ReadLine(), CultureInfo.InvariantCulture);
-            WriteLine($"{Exercice1048(salario)}");
+            WriteLine($"{Exercice1048(salario)}");*/
+        }
+
+        static string Exercice1047()
+        {
+            WriteLine("Entre com a hora  e minuto inicial e final do jogo.");
+            string[] horas = new String[5];
+            horas = ReadLine().Split(' ');
+            
+            int horaInicial = int.Parse(horas[0]);
+            int minutoInicial = int.Parse(horas[1]);
+            int horaFinal = int.Parse(horas[2]);
+            int minutoFinal = int.Parse(horas[3]);
+            
+
+            TimeSpan horaInicioDoJogo = new TimeSpan(horaInicial, minutoInicial, 0);
+            TimeSpan horaFimDoJogo = new TimeSpan(horaFinal, minutoFinal, 0);
+            TimeSpan intervalo = horaFimDoJogo - horaInicioDoJogo;
+
+            return ($"O JOGO DUROU {intervalo.Hours} HORAS E {intervalo.Minutes} MINUTOS");
+            //intervalo.Duration()
+            
         }
 
         static string Exercice1048(double salario)

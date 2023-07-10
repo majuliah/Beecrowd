@@ -84,7 +84,7 @@ namespace Exercice1000
             string[] values1 = ReadLine().Split(' ');
             string[] values2 = ReadLine().Split(' ');
             WriteLine($"VALUE TO PAY = R${Exercice1010(int.Parse(values1[1]),double.Parse(values1[2], CultureInfo.InvariantCulture), int.Parse(values2[1]), double.Parse(values2[2], CultureInfo.InvariantCulture))}");
-            
+             
         }
         public static string Message()
         {
@@ -124,6 +124,7 @@ namespace Exercice1000
                 product = number1 * number2;
             
             return product;
+            
         }
         public static double Exercice1005(double number1, double number2)
         {
