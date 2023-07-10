@@ -55,14 +55,62 @@ namespace Exercice1038
             */
             
             //Exercice1047
-            WriteLine(Exercice1047());
+            // WriteLine(Exercice1047());
 
             //Exercice1048
             /*WriteLine($"Entre com o salário:");
             double salario = double.Parse(ReadLine(), CultureInfo.InvariantCulture);
             WriteLine($"{Exercice1048(salario)}");*/
+            
+            //Exercice1049
+            WriteLine(Exercice1049());
         }
 
+        static string Exercice1049()
+        {
+            WriteLine("Entre com 3 palavras");
+            WriteLine("VERTEBRADOS: ");
+            WriteLine("Aves: Carnívoro e Onívoro ");
+            WriteLine("Mamíferos: Onívoro e Herbívoro ");
+            WriteLine("INVERTEBRADOS: ");
+            WriteLine("Inseto: Hematófago e Herbívoro");
+            WriteLine("Anelideo: Hematófago e Onívoro");
+            
+            string animal = ReadLine().ToUpper();
+            string chosenOne = "";
+            
+            switch (animal)
+            {
+                case "VERTEBRADO AVE CARNIVORO":
+                    chosenOne = ("ÁGUIA");
+                    break;
+                case "VERTEBRADO AVE ONIVORO":
+                    chosenOne = ("POMBA");
+                    break;
+                case "VERTEBRADO MAMIFERO ONIVORO":
+                    chosenOne = ("HOMEM");
+                    break;
+                case "VERTEBRADO MAMIFERO HERBIVORO":
+                    chosenOne = ("VACA");
+                    break;
+                case "INVERTEBRADO INSETO HEMATOFAGO":
+                    chosenOne = ("PULGA");
+                    break;
+                case "INVERTEBRADO INSETO HERBIVORO":
+                    chosenOne = ("LAGARTA");
+                    break;                
+                case "INVERTEBRADO ANELIDEO HEMATOFAGO":
+                    chosenOne = ("SANGUESSUGA");
+                    break;                
+                case "INVERTEBRADO ANELIDEO ONIVORO":
+                    chosenOne = ("MINHOCA");
+                    break;
+                default:
+                    chosenOne = "Animal não identificado";
+                    break;
+            }
+            return chosenOne;
+        }
         static string Exercice1047()
         {
             WriteLine("Entre com a hora  e minuto inicial e final do jogo.");
@@ -80,10 +128,7 @@ namespace Exercice1038
             TimeSpan intervalo = horaFimDoJogo - horaInicioDoJogo;
 
             return ($"O JOGO DUROU {intervalo.Hours} HORAS E {intervalo.Minutes} MINUTOS");
-            //intervalo.Duration()
-            
         }
-
         static string Exercice1048(double salario)
         {
             string resposta = "";
@@ -126,12 +171,6 @@ namespace Exercice1038
                        $"Em percentual: {reajuste}%";
             return resposta;
         }
-
-        static string Exercice1047(int hora, int minuto, int horaInicio, int fimMinuto)
-        {
-            return $"abc";
-        }
-
         static string Exercice1045(double a, double b, double c)
         {
             double maior = 0.0, meio = 0.0, menor = 0.0;
