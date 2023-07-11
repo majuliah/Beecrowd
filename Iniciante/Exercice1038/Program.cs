@@ -2,6 +2,7 @@
 using System;
 using System.ComponentModel.Design;
 using System.Globalization;
+using System.Runtime.CompilerServices;
 using static System.Console;
 
 namespace Exercice1038
@@ -63,9 +64,51 @@ namespace Exercice1038
             WriteLine($"{Exercice1048(salario)}");*/
             
             //Exercice1049
-            WriteLine(Exercice1049());
+            //WriteLine(Exercice1049());
+            
+            //Exercice 1050
+            WriteLine(Exercice1050());
+            
         }
 
+        static string Exercice1050()
+        {
+            WriteLine("Entre com um número de DDD");
+            int ddd = int.Parse(ReadLine());
+            string estado = "";
+            
+            switch (ddd)
+            {
+                case 61:
+                    estado = "Brasília";
+                    break;
+                case 71:
+                    estado = "Salvador";
+                    break;
+                case 11:
+                    estado = "São Paulo";
+                    break;
+                case 21:
+                    estado = "Rio de Janeiro";
+                    break;
+                case 32:
+                    estado = "Juiz de Fora";
+                    break;
+                case 19:
+                    estado = "Campinas";
+                    break;
+                case 27:
+                    estado = "Vitoria";
+                    break;
+                case 31:
+                    estado = "Belo Horionte";
+                    break;
+                default:
+                    estado = "DDD não cadastrado";
+                    break;
+            }
+            return estado;
+        }
         static string Exercice1049()
         {
             WriteLine("Entre com 3 palavras");
@@ -315,8 +358,6 @@ namespace Exercice1038
             double maiorABC = (maiorAB + value3 + Math.Abs(maiorAB - value3)) / 2.0;
             return maiorABC;
         }
-
-
         static string Exercice1041(double eixoX, double eixoY)
         {
             string result = $" ";
@@ -334,7 +375,6 @@ namespace Exercice1038
             return result;
         
         }
-
         static string Exercice1040(double n1, double n2, double n3, double n4)
         {
             double primeiraMedia = (n1 * 2.0 + n2 * 3.0 + n3 * 4.0 + n4 * 1.0) / 10.0;
@@ -359,8 +399,7 @@ namespace Exercice1038
                 
             }
             return answer;
-        }   
-
+        }
         static void Menu()
         {
             WriteLine($"Hello! Welcome to sidewitch burgers!");
@@ -376,7 +415,6 @@ namespace Exercice1038
             WriteLine($"    5                      Soda                        R$1.50    ");
             WriteLine($"-----------------------------------------------------------------");
         }
-
         static string Exercice1038(int order, int quantity)
         {
             double value = 0.0;
