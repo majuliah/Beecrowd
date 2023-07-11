@@ -67,10 +67,41 @@ namespace Exercice1038
             //WriteLine(Exercice1049());
             
             //Exercice 1050
-            WriteLine(Exercice1050());
+            //WriteLine(Exercice1050());
+            
+            //Exercice1051
+            //WriteLine(Exercice1051());
+            
             
         }
 
+        static string Exercice1051()
+        {
+            string imposto = "";
+            WriteLine("Entre com o valor do salário:");
+            double salario = double.Parse(ReadLine(), CultureInfo.InvariantCulture);
+            double calculo = 0.0;
+            
+            if (salario <= 2000.00)
+                imposto = "isento";
+            else if (salario > 2000.00 & salario <= 3000.00)
+            {
+                calculo = salario - 2000.00;
+                calculo *= 0.08;
+                imposto = calculo.ToString(CultureInfo.InvariantCulture);
+            }
+            else if (salario > 3000.00 & salario <= 4500.00)
+            {
+                calculo = (salario - 3000.00) * 0.18 + (1000.00 * 0.08);
+                imposto = calculo.ToString(CultureInfo.InvariantCulture);
+            }
+            else
+            {
+                calculo = ((salario - 4500.00) * 0.28) + (1500.00 * 0.18) + (1000.00 * 0.8);
+                imposto = calculo.ToString(CultureInfo.InvariantCulture);
+            }
+            return imposto;
+        }
         static string Exercice1050()
         {
             WriteLine("Entre com um número de DDD");
