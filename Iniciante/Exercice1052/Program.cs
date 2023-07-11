@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using static System.Console;
 
 namespace Exercice1052
@@ -22,16 +23,177 @@ namespace Exercice1052
             //WriteLine(Exercice1061());
             
             //Exercice1062
-            //WriteLine(Exercice1062);
+            //WriteLine(Exercice1062());    
             
+            //Exercice1065
+            //WriteLine(Exercice1065());
             
+            //Exercice1066
+            //WriteLine(Exercice1066());
+            
+            //Exercice1066;
+            //WriteLine(Exercice1067());
+            
+            //Exercice1070
+            //WriteLine(Exercice1070());
+            
+            //Exercice1071
+            //WriteLine(Exercice1071());
+            
+            //Exercice1072
+            WriteLine(Exercice1072());
         }
 
+        static string Exercice1072()
+        {
+            WriteLine("Com quantos valores deseja entrar?");
+            int total = int.Parse(ReadLine());
+            int numberIn = 0;
+            int numberOut = 0;
+            int reading;
+            
+            WriteLine($"Entre com {total} números");
+            
+            for (int i = 0; i < total; i++)
+            {
+                Write($"- ");
+                reading = int.Parse(ReadLine());
+                if (reading >= 10 && reading <= 20)
+                    numberIn += 1;
+                else
+                    numberOut += 1;
+            }
+            return ($"{numberIn} in\n{numberOut} out");
+        }
+        static string Exercice1071()
+        {
+            WriteLine("Entre com dois valores");
+            Write("Valor 1: ");
+            int value1 = int.Parse(ReadLine());
+            
+            Write("Valor 2: ");
+            int value2 = int.Parse(ReadLine());
+
+            int soma = 0;
+            int value3 = 0;
+
+            if (value1 > value2)
+            {
+                value3 = value1;
+                value1 = value2;
+                value2 = value3;
+            }
+            for (int i = value1; i < value2; i++)
+            {
+                if (i % 2 != 0)
+                    soma += i;
+            }
+            return $"{soma}";
+        }
+        static string Exercice1070()
+        {
+            WriteLine("Enter with a number");
+            int number = int.Parse(ReadLine());
+
+            if (number % 2 == 0)
+            {
+                number += 1;
+                WriteLine(number);
+                for (int i = 0; i <= 4; i++)
+                {
+                    number += 2;
+                    WriteLine(number);
+                }
+            }
+            else
+            {
+                for (int i = 0; i <= 5; i++)
+                {
+                    number += 2;
+                    WriteLine(number);
+                }
+            }
+            return "";
+        }
+        static string Exercice1067()
+        {
+            WriteLine("Entre com um valor");
+            int valor = int.Parse(ReadLine());
+
+            if (valor >= 1 && valor <= 1000)
+            {
+                for (int i = 1; i <= valor; i++)
+                {
+                    if (i % 2 != 0)
+                        WriteLine(i);
+                }
+            }
+            else
+                return ("Value out of range");
+
+            return "";
+        }
+        static string Exercice1066()
+        {
+            WriteLine("Enter with 5 values");
+            string numbers = ReadLine();
+            string[] values = numbers.Split(' ');
+            int par = 0;
+            int impar = 0;
+            int positivo = 0;
+            int negativo = 0;
+
+            foreach (var value in values)
+            {
+                if (int.Parse(value) < 0)
+                    negativo += 1;
+                else
+                    positivo += 1;
+                
+                if (int.Parse(value) % 2 == 0)
+                    par += 1;
+                else
+                    impar += 1;
+            }
+            return $"{par} valores pares\n" +
+                   $"{impar} valores impares\n" +
+                   $"{positivo} valores positivos\n" +
+                   $"{negativo} valores negativos";
+        }
+        static string Exercice1065()
+        {
+            WriteLine("Enter with 5 values");
+            string numbers = ReadLine();
+            string[] values = numbers.Split(' ');
+            double quantidade = 0;
+
+            foreach (var value in values)
+            {
+                if (double.Parse(value, CultureInfo.InvariantCulture) % 2 == 0)
+                    quantidade += 1;
+            }
+            return $"{quantidade} valores pares";
+        }
         static string Exercice1062()
         {
+            int quantidade = 0;
+            double soma = 0.0;
+            double media = 0.0;
             
-            
-            return "";
+            WriteLine("Enter 6 values");
+            string numbers = ReadLine();
+            string[] values = numbers.Split(' ');
+
+            foreach (var value in values)
+            {
+                if (double.Parse(value, CultureInfo.InvariantCulture) > 0)
+                {
+                    quantidade += 1;
+                    soma += double.Parse(value);
+                }
+            }
+            media = soma / quantidade;
+            return $"{quantidade} valores positivos\n{media.ToString("F1", CultureInfo.InvariantCulture)}";
         }
         static string Exercice1061()
         {
