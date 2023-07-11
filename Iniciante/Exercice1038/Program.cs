@@ -71,8 +71,6 @@ namespace Exercice1038
             
             //Exercice1051
             //WriteLine(Exercice1051());
-            
-            
         }
 
         static string Exercice1051()
