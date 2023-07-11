@@ -41,9 +41,23 @@ namespace Exercice1052
             //WriteLine(Exercice1071());
             
             //Exercice1072
-            WriteLine(Exercice1072());
+            //WriteLine(Exercice1072());
+            
+            //Exercice1073
+            Exercice1073();
         }
 
+        static void Exercice1073()
+        {
+            WriteLine("Enter with a value");
+            int number = int.Parse(ReadLine());
+
+            for (int i = 1; i <= number; i++)
+            {
+                if (i % 2 == 0)
+                    WriteLine($"{i} ^ 2 = {Math.Pow(i, 2)}");
+            }
+        }
         static string Exercice1072()
         {
             WriteLine("Com quantos valores deseja entrar?");
