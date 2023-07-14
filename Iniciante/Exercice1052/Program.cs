@@ -44,7 +44,7 @@ namespace Exercice1052
             //WriteLine(Exercice1072());
             
             //Exercice1073
-            Exercice1073();
+            //Exercice1073();
         }
 
         static void Exercice1073()
