@@ -23,9 +23,23 @@ namespace Exercice1075
             //Exercice1094
             //Exercice1094();
             
+            //Exercice1095
+            Exercicice1095();
             
         }
 
+
+        static void Exercicice1095()
+        {
+            int j = 60;
+            int i = 1;
+            for (int a = 1; a <= 13; a++)
+            {
+                WriteLine($"I = {i} J = {j}");
+                j -= 5;
+                i += 3;
+            }
+        }
         static void Exercice1094()
         {
             int qtdeSapo = 0;
