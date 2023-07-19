@@ -24,11 +24,23 @@ namespace Exercice1075
             //Exercice1094();
             
             //Exercice1095
-            Exercicice1095();
+            //Exercicice1095();
             
+            //Exercice1096
+            Exercice1096();
         }
 
 
+        static void Exercice1096()
+        {
+            for (int i = 1; i <= 9; i += 2)
+            {
+                for (int j = 7; j >= 5; j--)
+                {
+                    WriteLine($"I={i} J={j}");
+                }
+            }
+        }
         static void Exercicice1095()
         {
             int j = 60;
