@@ -16,8 +16,78 @@ namespace Exercice1075
             
             //Exercice1079
             //Exercice1079();
+            
+            //Exercice1080
+            //Exercice1080();
+            
+            //Exercice1094
+            //Exercice1094();
+            
+            
         }
 
+        static void Exercice1094()
+        {
+            int qtdeSapo = 0;
+            int qtdeRato = 0;
+            int qtdeCoelho = 0;
+            int quantidadeCobaias = 0;
+            string amostra;
+            char tipoAnimal;
+            
+            short quantidadeTestes;
+            WriteLine("Quantos testes deseja realizar?");
+            quantidadeTestes = short.Parse(ReadLine());
+
+            for (int i = 0; i < quantidadeTestes; i++)
+            {
+                amostra = ReadLine();
+                quantidadeCobaias += int.Parse(amostra.Split(' ')[0]);
+                tipoAnimal = char.Parse(amostra.Split(' ')[1].ToUpper());
+
+                switch (tipoAnimal)
+                {
+                    case 'S':
+                        qtdeSapo += int.Parse(amostra.Split(' ')[0]);
+                        break;
+                    case 'R':
+                        qtdeRato += int.Parse(amostra.Split(' ')[0]);
+                        break;
+                    case 'C':
+                        qtdeCoelho += int.Parse(amostra.Split(' ')[0]);
+                        break;
+                }
+            }
+            
+            double percentualCoelho = (double)qtdeCoelho / quantidadeCobaias;
+            double percentualRatos = (double)qtdeRato / quantidadeCobaias;
+            double percentualSapos = (double)qtdeSapo / quantidadeCobaias;
+            
+            WriteLine($"Total: {quantidadeCobaias}");
+            WriteLine($"Total de coelhos: {qtdeCoelho}");
+            WriteLine($"Total de ratos: {qtdeRato}");
+            WriteLine($"Total de sapos: {qtdeSapo}");
+            WriteLine($"Percentual de coelhos: {percentualCoelho.ToString("F2", CultureInfo.InvariantCulture)}");
+            WriteLine($"Percentual de ratos: {percentualRatos.ToString("F2", CultureInfo.InvariantCulture)}");
+            WriteLine($"Percentual de sapos: {percentualSapos.ToString("F2", CultureInfo.InvariantCulture)}");
+            
+        }
+        static void Exercice1080()
+        {
+            int numbers, maior = 0, posicao = 0;
+            WriteLine("Enter with the numbers");
+            for (int i = 0; i < 100; i++)
+            {
+                numbers = int.Parse(ReadLine());
+                if (numbers > maior)
+                {
+                    maior = numbers;
+                    posicao = i + 1;
+                }
+            }
+            WriteLine();
+            WriteLine($"Maior: {maior}\nPosição: {posicao}");
+        }
         static void Exercice1075()
         {
             WriteLine("Enter with a number");
