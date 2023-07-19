@@ -27,10 +27,28 @@ namespace Exercice1075
             //Exercicice1095();
             
             //Exercice1096
-            Exercice1096();
+            //Exercice1096();
+            
+            //Exercice1097
+            Exercice1097();
         }
 
 
+        static void Exercice1097()
+        {
+            int m = 7;
+            int n;
+            for (int i = 1; i <= 9; i += 2)
+            {
+                n = m;
+                for (int j = 1; j <= 3; j++)
+                {
+                    WriteLine($"I={i} J= {n}");
+                    n--;
+                }
+                m += 2;
+            }
+        }
         static void Exercice1096()
         {
             for (int i = 1; i <= 9; i += 2)
