@@ -30,10 +30,42 @@ namespace Exercice1075
             //Exercice1096();
             
             //Exercice1097
-            Exercice1097();
+            //Exercice1097();
+            
+            //Exercice1098
+            //Exercice1098();
+
         }
 
 
+        static void Exercice1098()
+        {
+            double i = 0;
+            while (i <= 2)
+            {
+                for (int k = 1; k <= 3; k++)
+                {
+                    if (i == 0)
+                    {
+                        WriteLine($"I = {i} J = {(k + i).ToString(CultureInfo.InvariantCulture)}");
+                    }
+                    else if (i == 1)
+                    {
+                        WriteLine($"I = {i} J = {(k + i).ToString(CultureInfo.InvariantCulture)}");
+                    }
+                    else if (i == 2 || i == 2.0)
+                    {
+                        WriteLine($"I = {i.ToString().Remove(1,1)} J = {(k + i).ToString(CultureInfo.InvariantCulture)}");
+                    }
+                    else
+                    {
+                        WriteLine(
+                            $"I = {i.ToString("F1", CultureInfo.InvariantCulture)} J = {(k + i).ToString("F1",CultureInfo.InvariantCulture)}");
+                    }
+                }
+                i += 0.2;
+            }
+        }
         static void Exercice1097()
         {
             int m = 7;
