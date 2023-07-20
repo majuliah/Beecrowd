@@ -34,10 +34,28 @@ namespace Exercice1075
             
             //Exercice1098
             //Exercice1098();
+            
+            //Exercice1113
+            //Exercice1113();
 
         }
 
 
+        static void Exercice1113()
+        {
+            WriteLine("Entre com dois números");
+            string numeros = ReadLine();
+            int numero1 = int.Parse(numeros.Split(' ')[0]);
+            int numero2 = int.Parse(numeros.Split(' ')[1]);
+
+            if (numero1 > numero2)
+                WriteLine("Decrescente");
+            else if (numero1 < numero2)
+                WriteLine("Crescente");
+            else
+                Clear();
+
+        }
         static void Exercice1098()
         {
             double i = 0;
