@@ -39,11 +39,32 @@ namespace Exercice1075
             //Exercice1113();
             
             //Exercice1114
-            Exercice1114();
+            //Exercice1114();
+            
+            //Exercice1115
+            Exercice1115();
+            
+            
 
         }
 
-
+        static void Exercice1115()
+        {
+            string[] quadrante = new string[2];
+            WriteLine("Entre com os quadrantes");
+            quadrante = ReadLine().Split(' ');
+            
+            if (int.Parse(quadrante[0]) > 0 && int.Parse(quadrante[1]) > 0)
+                WriteLine("primeiro");
+            else if (int.Parse(quadrante[0]) > 0 && int.Parse(quadrante[1]) < 0)
+                WriteLine("quarto");
+            else if (int.Parse(quadrante[0]) < 0 && int.Parse(quadrante[1]) < 0)
+                WriteLine("terceiro");
+            else if (int.Parse(quadrante[0]) < 0 && int.Parse(quadrante[1]) > 0)
+                WriteLine("Segundo");
+            else
+                Write("");
+        }
         static void Exercice1114()
         {
             string senha = "2002";
@@ -58,7 +79,6 @@ namespace Exercice1075
             } while (advinha != senha);
             
             WriteLine("Acesso Permitido");
-            
         }
         static void Exercice1113()
         {
