@@ -35,6 +35,9 @@ namespace Exercice1075
             //Exercice1098
             //Exercice1098();
             
+            //Exercice1099
+            //Exercice1099();
+            
             //Exercice1113
             //Exercice1113();
             
@@ -42,7 +45,7 @@ namespace Exercice1075
             //Exercice1114();
             
             //Exercice1115
-            Exercice1115();
+            //Exercice1115();
             
             
 
@@ -94,6 +97,40 @@ namespace Exercice1075
             else
                 Clear();
 
+        }
+        static void Exercice1099()
+        {
+            string[] numbers = new string[2];
+            WriteLine("Qauntos testes deseja fazer?");
+            short testes = short.Parse(ReadLine());
+            int soma = 0;
+
+            for (int i = 0; i < testes; i++)
+            {
+                int maior, menor;
+                
+                WriteLine("Entre com os números");
+                numbers = ReadLine().Split(' ');
+
+                if (int.Parse(numbers[0]) < int.Parse(numbers[1]))
+                {
+                    maior = int.Parse(numbers[0]);
+                    menor = int.Parse(numbers[1]);
+                }
+                else
+                {
+                    maior = int.Parse(numbers[1]);
+                    menor = int.Parse(numbers[0]);
+                }
+
+                for (int j = menor; j <= maior; j++)
+                {
+                    if (j % 2 != 0)
+                        soma += j;
+                }
+                WriteLine(soma);
+            }
+            
         }
         static void Exercice1098()
         {
