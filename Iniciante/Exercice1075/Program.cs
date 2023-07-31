@@ -37,10 +37,29 @@ namespace Exercice1075
             
             //Exercice1113
             //Exercice1113();
+            
+            //Exercice1114
+            Exercice1114();
 
         }
 
 
+        static void Exercice1114()
+        {
+            string senha = "2002";
+            WriteLine("Tente advinhar a senha: ");
+            Write("Senha: ");
+            string advinha = "";
+            do
+            {
+                advinha = ReadLine();
+                if (advinha != senha)
+                    WriteLine("Senha Inválida");
+            } while (advinha != senha);
+            
+            WriteLine("Acesso Permitido");
+            
+        }
         static void Exercice1113()
         {
             WriteLine("Entre com dois números");
