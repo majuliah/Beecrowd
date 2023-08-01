@@ -38,6 +38,9 @@ namespace Exercice1075
             //Exercice1099
             //Exercice1099();
             
+            //Exercice1011
+            //Exercice1101();
+            
             //Exercice1113
             //Exercice1113();
             
@@ -47,10 +50,100 @@ namespace Exercice1075
             //Exercice1115
             //Exercice1115();
             
+            //Exercice1116
+            //Exercice1116();
             
-
+            //Exercice1117
+            //Exercice1117();
+            
+            //Exercice1118
+            //Exercice1118();
+            
         }
 
+        static void Exercice1118()
+        {
+            short resposta = 0;
+            do
+            { 
+                double nota1 = -1.0;
+                double nota2 = -1.0;
+                
+                while (nota1 < 0.0 || nota1 > 10.0)
+                {
+                    nota1 = double.Parse(ReadLine(), CultureInfo.InvariantCulture);
+                    if (nota1 < 0.0 || nota1 > 10.0)
+                        WriteLine("Nota inválida");
+                }
+                
+                while (nota2 < 0.0 || nota2 > 10.0)
+                {
+                    nota2 = double.Parse(ReadLine(), CultureInfo.InvariantCulture);
+                    if (nota2 < 0.0 || nota2 > 10.0)
+                        WriteLine("Nota inválida");
+                }
+
+                double media = (nota1 + nota2) / 2.0;
+                WriteLine($"media = {media.ToString("F2", CultureInfo.InvariantCulture)}");
+                
+                WriteLine("Novo Calculo 1-sim 2-nao"); 
+                resposta = short.Parse(ReadLine());
+                
+                while (resposta != 1 & resposta != 2)
+                { 
+                    WriteLine("Novo Calculo 1-sim 2-nao"); 
+                    resposta = short.Parse(ReadLine());        
+                }
+
+            } while (resposta == 1);
+        }
+        static void Exercice1117()
+        {
+            double nota1 = -1.0;
+            double nota2 = -1.0;
+
+            while (nota1 < 0.0 || nota1 > 10.0)
+            {
+                nota1 = double.Parse(ReadLine(), CultureInfo.InvariantCulture);
+                if (nota1 < 0.0 || nota1 > 10.0)
+                    WriteLine("Nota inválida");
+            }
+            
+            while (nota2 < 0.0 || nota2 > 10.0)
+            {
+                nota2 = double.Parse(ReadLine(), CultureInfo.InvariantCulture);
+                if (nota2 < 0.0 || nota2 > 10.0)
+                    WriteLine("Nota inválida");
+            }
+
+            double media = (nota1 + nota2) / 2.0;
+            WriteLine($"media = {media.ToString("F2", CultureInfo.InvariantCulture)}");
+            
+        }
+        static void Exercice1116()
+        {
+            WriteLine("Quantas verificações deseja fazer?");
+            short vezes = short.Parse(ReadLine());
+            string numeros = "";
+            int num1, num2;
+            double divisao = 0.0;
+
+            for (int i = 0; i < vezes; i++)
+            {
+                numeros = ReadLine();
+                num1 = int.Parse(numeros.Split(' ')[0]);
+                num2 = int.Parse(numeros.Split(' ')[1]);
+
+                if (num2 != 0)
+                {
+                    divisao = (double)num1 / (double)num2;
+                    WriteLine($"{divisao.ToString("F1", CultureInfo.InvariantCulture)}");
+                }
+                else
+                    WriteLine("divisão impossível");
+                
+            }
+        }
         static void Exercice1115()
         {
             string[] quadrante = new string[2];
@@ -97,6 +190,34 @@ namespace Exercice1075
             else
                 Clear();
 
+        }
+        static void Exercice1101()
+        {
+            string[] numbers = new string[2];
+            numbers = ReadLine().Split(' ');
+
+            int min, max, soma = 0;
+
+            if (int.Parse(numbers[0]) > int.Parse(numbers[1]))
+            {
+                min = int.Parse(numbers[1]);
+                max = int.Parse(numbers[0]);
+            }
+            else
+            {
+                min = int.Parse(numbers[0]);
+                max = int.Parse(numbers[1]);
+            }
+
+            if (min != 0 && max != 0)
+            {
+                for (int i = min; i <= max; i++)
+                {
+                    soma += i;
+                    Write($"{i} ");
+                }
+                Write($"Sum={soma}");
+            }
         }
         static void Exercice1099()
         {
