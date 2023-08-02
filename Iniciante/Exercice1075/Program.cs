@@ -59,8 +59,50 @@ namespace Exercice1075
             //Exercice1118
             //Exercice1118();
             
+            //Exercice1131
+            //Exercice1131();
         }
 
+        static void Exercice1131()
+        {
+            short resposta = 1;
+            int inter = 0, gremio = 0, empates = 0, grenais = 0;
+
+            do
+            {
+                string[] placar = new string[2];
+                placar = ReadLine().Split(' ');
+
+                if (int.Parse(placar[0]) > int.Parse(placar[1]))
+                {
+                    inter += 1;
+                }else if (int.Parse(placar[0]) < int.Parse(placar[1]))
+                {
+                    gremio += 1;
+                }
+                else
+                {
+                    empates += 1;
+                }
+                grenais += 1;
+                
+                WriteLine("Novo grenal 1-sim 2-nao");
+                resposta = short.Parse(ReadLine());
+
+            } while (resposta == 1);
+            
+            WriteLine($"{grenais} grenais");
+            WriteLine($"Inter: {inter}");
+            WriteLine($"Gremio: {gremio}");
+            WriteLine($"Empates: {empates}");
+
+            if (empates > inter & empates > gremio)
+                WriteLine("Empate");
+            else if (inter < gremio)
+                WriteLine("Gremio venceu mais");
+            else if (inter > gremio)
+                WriteLine("Inter venceu mais");
+        }
         static void Exercice1118()
         {
             short resposta = 0;
