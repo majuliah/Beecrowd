@@ -64,9 +64,34 @@ namespace Exercice1075
             
             //Exercice1132
             //Exercice1132();
+            
+            //Exercice1133
+            Exercice1133();
         }
 
+        static void Exercice1133()
+        {
+            WriteLine("Entre com dois valores inteiros");
+            int value1 = int.Parse(ReadLine());
+            int value2 = int.Parse(ReadLine());
 
+            if (value1 < value2)
+            {
+                for (int i = value1; i < value2; i++)
+                {
+                    if (i % 5 == 2 || i % 5 == 3)
+                        WriteLine(i);
+                }
+            }
+            else
+            {
+                for (int i = value1; i > value2; i--)
+                {
+                    if (i % 5 == 2 || i % 5 == 3)
+                        WriteLine(i);
+                }
+            }
+        }
         static void Exercice1132()
         {
             WriteLine("Entre com dois valores inteiros");
