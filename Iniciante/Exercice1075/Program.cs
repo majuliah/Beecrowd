@@ -69,10 +69,26 @@ namespace Exercice1075
             //Exercice1133();
             
             //Exercice1134
-            Exercice1134();
+            //Exercice1134();
+            
+            //Exercice1142
+            Exercice1142();
             
         }
 
+        static void Exercice1142()
+        {
+            WriteLine("Entre com um número positivo inteiro");
+            int numero = int.Parse(ReadLine());
+            int contagem = 1;
+
+            for (int i = 0; i < numero; i++)
+            {
+                WriteLine($"{contagem} {contagem + 1} {contagem + 2} PUM");
+                contagem += 4;
+            }
+            
+        }
         static void Exercice1134()
         {
             int alcool = 0, gasolina = 0, diesel = 0, tipocombustivel;
