@@ -66,9 +66,48 @@ namespace Exercice1075
             //Exercice1132();
             
             //Exercice1133
-            Exercice1133();
+            //Exercice1133();
+            
+            //Exercice1134
+            Exercice1134();
+            
         }
 
+        static void Exercice1134()
+        {
+            int alcool = 0, gasolina = 0, diesel = 0, tipocombustivel;
+            bool escolha = true;
+            
+
+            while (escolha)
+            {
+                tipocombustivel = int.Parse(ReadLine());
+                switch (tipocombustivel)
+                {
+                    case 1:
+                        alcool += 1;
+                        break;
+                    case 2:
+                        gasolina += 1;
+                        break;
+                    case 3:
+                        diesel += 1;
+                        break;
+                    case 4:
+                        escolha = false;
+                        break;
+                    default:
+                        escolha = true;
+                        break;
+                }
+            }
+            WriteLine("MUITO OBRIGADO");
+            WriteLine($"Alcool: {alcool}");
+            WriteLine($"Gasolina: {gasolina}");
+            WriteLine($"Diesel: {diesel}");
+
+
+        }
         static void Exercice1133()
         {
             WriteLine("Entre com dois valores inteiros");
