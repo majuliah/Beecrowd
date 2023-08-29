@@ -72,10 +72,27 @@ namespace Exercice1075
             //Exercice1134();
             
             //Exercice1142
-            Exercice1142();
+            //Exercice1142();
+            
+            //Exercice1143
+            Exercice1143();
+            
             
         }
 
+
+        static void Exercice1143()
+        {
+            WriteLine("Entre com um número inteiro");
+            int linhas = int.Parse(ReadLine());
+            int contador = 1;
+            
+            for (int i = 0; i < linhas; i++)
+            {
+                WriteLine($"{contador} {Math.Pow(contador, 2)} {Math.Pow(contador, 3)}");
+                contador += 1;
+            }
+        }
         static void Exercice1142()
         {
             WriteLine("Entre com um número positivo inteiro");
