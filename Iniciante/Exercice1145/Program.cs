@@ -8,9 +8,23 @@ namespace Exercice1145
         static void Main(string[] args)
         {
             //Exercice1145
-            Exercice1145();
+            //Exercice1145();
+            
+            //Exercice1146
+            //Exercice1146();
         }
 
+        static void Exercice1146()
+        {
+            int numero = 1;
+            do
+            {
+                numero = int.Parse(ReadLine());
+                for (int i = 1; i <= numero; i++)
+                    Write($"{i} ");
+                WriteLine();
+            } while (numero != 0);
+        }
         static void Exercice1145()
         {
             string[] numeros = ReadLine().Split(' ');
