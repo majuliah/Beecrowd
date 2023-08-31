@@ -19,6 +19,37 @@ namespace Exercice1145
             //Exercice1153
             //Exercice1153();
             
+            //Exercice1151
+            Exercice1151();
+            
+        }
+
+        static void Exercice1151()
+        {
+            int number = 0;
+            int a = 0;
+            int b = 1;
+            
+            do
+            {
+                number = int.Parse(ReadLine());
+                
+            } while (number < 0 || number > 46);
+
+            for (int i = 0; i < number; i++)
+            {
+                if (i == number - 1)
+                    WriteLine(a);
+                else
+                    Write($"{a} ");
+                
+                int aux = b;
+                b = a;
+                a = b + aux;
+            }
+
+
+
         }
         static void Exercice1153()
         {
