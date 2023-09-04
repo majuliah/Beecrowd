@@ -20,7 +20,7 @@ namespace Exercice1145
             //Exercice1153();
             
             //Exercice1151
-            Exercice1151();
+            //Exercice1151();
             
         }
 
@@ -34,7 +34,7 @@ namespace Exercice1145
             {
                 number = int.Parse(ReadLine());
                 
-            } while (number < 0 || number > 46);
+            } while (number <= 0 || number > 46);
 
             for (int i = 0; i < number; i++)
             {
@@ -47,9 +47,6 @@ namespace Exercice1145
                 b = a;
                 a = b + aux;
             }
-
-
-
         }
         static void Exercice1153()
         {
@@ -63,10 +60,23 @@ namespace Exercice1145
         }
         static void Exercice1149()
         {
-            int A = 0;
-            int N = 0;
-            A = int.Parse(ReadLine());
-            //entender esta questão e resolver!
+            int contador = 1;
+            int soma = 0;
+            string[] numeros = ReadLine().Split(' ');
+            int a = int.Parse(numeros[0]);
+            int n = int.Parse(numeros[contador]);
+
+            while (n <= 0)
+            {
+                contador++;
+                n = int.Parse(numeros[contador]);
+            }
+
+            for (int i = 0; i < n; i++)
+            {
+                soma += a + contador;
+            }
+            WriteLine(soma);
         }
         static void Exercice1146()
         {
