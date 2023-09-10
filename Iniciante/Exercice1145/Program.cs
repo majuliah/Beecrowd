@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using static System.Console;
 
 namespace Exercice1145
@@ -22,8 +23,50 @@ namespace Exercice1145
             //Exercice1151
             //Exercice1151();
             
+            //Exercice1150
+            //Exercice1150();
+            
+            //Exercice1154
+            Exercice1154();
         }
 
+        static void Exercice1154()
+        {
+            double media;
+            int quantidade = 0;
+            double idade = 0.0;
+            int idades = 0;
+
+            while (idades >= 0)
+            {
+                idades = int.Parse(ReadLine());
+                if (idades >= 0)
+                {
+                    idade += idades;
+                    quantidade++;
+                }
+            }
+
+            media = idade / (double)quantidade;
+            WriteLine($"{media.ToString("F2", CultureInfo.InvariantCulture)}");
+        }
+
+        static void Exercice1150()
+        {
+            int x = int.Parse(ReadLine());
+            int z = 0;
+            int soma = x;
+
+            while (z < x)
+                z = int.Parse(ReadLine());
+
+            for (int i = x; i < z; i++)
+            {
+                soma++;
+            }
+            WriteLine(soma);
+
+        }
         static void Exercice1151()
         {
             int number = 0;
