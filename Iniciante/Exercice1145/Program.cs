@@ -27,9 +27,22 @@ namespace Exercice1145
             //Exercice1150();
             
             //Exercice1154
-            Exercice1154();
+            //Exercice1154();
+            
+            //Exercice1155
+            Exercice1155();
         }
 
+
+        static void Exercice1155()
+        {
+            double S = 1.0;
+            for (int i = 2; i <= 100; i++)
+            {
+                S += 1.0 / i;
+            }
+            WriteLine($"{S.ToString("F2", CultureInfo.InvariantCulture)}");
+        }
         static void Exercice1154()
         {
             double media;
@@ -50,7 +63,6 @@ namespace Exercice1145
             media = idade / (double)quantidade;
             WriteLine($"{media.ToString("F2", CultureInfo.InvariantCulture)}");
         }
-
         static void Exercice1150()
         {
             int x = int.Parse(ReadLine());
