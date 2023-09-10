@@ -30,10 +30,23 @@ namespace Exercice1145
             //Exercice1154();
             
             //Exercice1155
-            Exercice1155();
+            //Exercice1155();
+            
+            //Exercice1157
+            Exercice1157();
         }
 
+        static void Exercice1157()
+        {
+            WriteLine("Entre com um número");
+            int numero = int.Parse(ReadLine());
 
+            for (int i = 1; i <= numero; i++)
+            {
+                if(numero % i == 0)
+                    WriteLine(i);
+            }
+        }
         static void Exercice1155()
         {
             double S = 1.0;
