@@ -33,7 +33,10 @@ namespace Exercice1145
             //Exercice1155();
             
             //Exercice1157
-            Exercice1157();
+            //Exercice1157();
+            
+            //Exercice1158
+            //Exercice1158();
         }
 
         static void Exercice1157()
