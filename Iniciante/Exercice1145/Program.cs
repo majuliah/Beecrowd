@@ -37,8 +37,27 @@ namespace Exercice1145
             
             //Exercice1158
             //Exercice1158();
+            
+            //Exercice1159
+            //Exercice1159();
+            
+            //Exercice1160
+            //Exercice1160();
         }
 
+
+        static void Exercice1160()
+        {
+            WriteLine("Nome");
+        }            
+        static void Exercice1159()
+        {
+            WriteLine("Nome");
+        }        
+        static void Exercice1158()
+        {
+            WriteLine("Nome");
+        }
         static void Exercice1157()
         {
             WriteLine("Entre com um número");
@@ -48,6 +67,18 @@ namespace Exercice1145
             {
                 if(numero % i == 0)
                     WriteLine(i);
+            }
+        }
+
+        static void Exercice1156()
+        {
+            int numerador = 1;
+            int denominador = 3;
+            double soma = 0;
+
+            for ()
+            {
+                
             }
         }
         static void Exercice1155()
