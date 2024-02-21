@@ -1,0 +1,16 @@
+E:\Estudos\Beecrowd\Beecrowd\Teste\obj\Debug\net5.0\Teste.GeneratedMSBuildEditorConfig.editorconfig
+E:\Estudos\Beecrowd\Beecrowd\Teste\obj\Debug\net5.0\Teste.AssemblyInfoInputs.cache
+E:\Estudos\Beecrowd\Beecrowd\Teste\obj\Debug\net5.0\Teste.AssemblyInfo.cs
+E:\Estudos\Beecrowd\Beecrowd\Teste\obj\Debug\net5.0\Teste.csproj.CoreCompileInputs.cache
+E:\Estudos\Beecrowd\Beecrowd\Teste\obj\Debug\net5.0\Teste.sourcelink.json
+E:\Estudos\Beecrowd\Beecrowd\Teste\bin\Debug\net5.0\Teste.exe
+E:\Estudos\Beecrowd\Beecrowd\Teste\bin\Debug\net5.0\Teste.deps.json
+E:\Estudos\Beecrowd\Beecrowd\Teste\bin\Debug\net5.0\Teste.runtimeconfig.json
+E:\Estudos\Beecrowd\Beecrowd\Teste\bin\Debug\net5.0\Teste.runtimeconfig.dev.json
+E:\Estudos\Beecrowd\Beecrowd\Teste\bin\Debug\net5.0\Teste.dll
+E:\Estudos\Beecrowd\Beecrowd\Teste\bin\Debug\net5.0\Teste.pdb
+E:\Estudos\Beecrowd\Beecrowd\Teste\obj\Debug\net5.0\Teste.dll
+E:\Estudos\Beecrowd\Beecrowd\Teste\obj\Debug\net5.0\refint\Teste.dll
+E:\Estudos\Beecrowd\Beecrowd\Teste\obj\Debug\net5.0\Teste.pdb
+E:\Estudos\Beecrowd\Beecrowd\Teste\obj\Debug\net5.0\Teste.genruntimeconfig.cache
+E:\Estudos\Beecrowd\Beecrowd\Teste\obj\Debug\net5.0\ref\Teste.dll
