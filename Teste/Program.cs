@@ -63,18 +63,18 @@ namespace Teste
             {
                 numero = int.Parse(Console.ReadLine());
 
-                /*
                 for (int j = 1; j < numero; j++)
                 {
                     if (numero % j == 0)
-                        soma += j;
+                    {
+                        soma = soma + j;
+                    }
                 }
 
                 if (soma == numero)
                     Console.WriteLine($"{numero} eh perfeito");
                 else
                     Console.WriteLine($"{numero} nao eh perfeito");
-                */
 
             }
         }
