@@ -9,7 +9,8 @@ namespace Teste
         {
             //exercício teste
             // ExercicioTeste();
-            SegundoExercicio();
+            //SegundoExercicio();
+            TerceiroExercicio();
         }
         public static void ExercicioTeste()
         {
@@ -44,6 +45,38 @@ namespace Teste
 
             double media = (nota1 + nota2 + nota3) / 3.0;
             Console.WriteLine($"MEDIA = {media.ToString("F1", CultureInfo.InvariantCulture)}");
+        }
+
+        public static void TerceiroExercicio()
+        {
+            Console.WriteLine("Entre com um número de testes");
+            int testes = 0;
+            do
+            {
+                testes = int.Parse(Console.ReadLine());
+            } while (testes <= 0 && testes <= 20);
+
+            int soma = 0;
+            int numero = 0;
+
+            for (int i = 0; i < testes; i++)
+            {
+                numero = int.Parse(Console.ReadLine());
+
+                /*
+                for (int j = 1; j < numero; j++)
+                {
+                    if (numero % j == 0)
+                        soma += j;
+                }
+
+                if (soma == numero)
+                    Console.WriteLine($"{numero} eh perfeito");
+                else
+                    Console.WriteLine($"{numero} nao eh perfeito");
+                */
+
+            }
         }
     }
 }
