@@ -61,7 +61,9 @@ namespace Teste
 
             for (int i = 0; i < testes; i++)
             {
+                soma = 0;
                 numero = int.Parse(Console.ReadLine());
+
 
                 for (int j = 1; j < numero; j++)
                 {
@@ -71,7 +73,7 @@ namespace Teste
                     }
                 }
 
-                if (soma == numero)
+                if (numero  == soma)
                     Console.WriteLine($"{numero} eh perfeito");
                 else
                     Console.WriteLine($"{numero} nao eh perfeito");
