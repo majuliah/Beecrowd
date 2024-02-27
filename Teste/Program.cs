@@ -10,7 +10,8 @@ namespace Teste
             //exercício teste
             // ExercicioTeste();
             //SegundoExercicio();
-            TerceiroExercicio();
+            //TerceiroExercicio();
+            QuartoExercicio();
         }
         public static void ExercicioTeste()
         {
@@ -72,13 +73,29 @@ namespace Teste
                         soma = soma + j;
                     }
                 }
-
                 if (numero  == soma)
                     Console.WriteLine($"{numero} eh perfeito");
                 else
                     Console.WriteLine($"{numero} nao eh perfeito");
 
             }
+        }
+        public static void QuartoExercicio()
+        {
+            //refazer
+            Console.WriteLine("Sequencia IJ");
+            for(double i = 0; i <= 2; i += 0.2)
+            {
+                for(double j = 1; j < 4; j++)
+                {
+                    Console.WriteLine($"I = {i} J = {j + i}");
+                }
+            }
+        }
+        public static void QuintoExercicio()
+        {
+            string numeros = Console.ReadLine();
+            //int[] vetorNumero = int.Parse(numeros.Split(" "));
         }
     }
 }
