@@ -10,39 +10,42 @@ namespace Exercice1145
         {
             //Exercice1145
             //Exercice1145();
-            
+
             //Exercice1146
             //Exercice1146();
-            
+
             //Exercice1149
             //Exercice1149();
-            
+
             //Exercice1153
             //Exercice1153();
-            
+
             //Exercice1151
             //Exercice1151();
-            
+
             //Exercice1150
             //Exercice1150();
-            
+
             //Exercice1154
             //Exercice1154();
-            
+
             //Exercice1155
             //Exercice1155();
-            
+
+            //Exercice1156
+            //Exercice1156();
+
             //Exercice1157
             //Exercice1157();
-            
+
             //Exercice1158
             //Exercice1158();
-            
+
             //Exercice1159
             //Exercice1159();
-            
+
             //Exercice1160
-            //Exercice1160();
+            // Exercice1160();
         }
 
 
@@ -56,7 +59,35 @@ namespace Exercice1145
         }        
         static void Exercice1158()
         {
-            WriteLine("Nome");
+            WriteLine("Entre com o número de testes");
+            int testes = int.Parse(ReadLine());
+
+            string[] vetorNums;
+            int totalImpar = 0;
+
+            int soma = 0;
+            int cont = 0;
+
+            for (int i = 0; i < testes; i++)
+            {
+                vetorNums = ReadLine().Split(' ');
+                int x = int.Parse(vetorNums[0]);
+                int y = int.Parse(vetorNums[1]);
+                
+                do
+                {
+                    if ((x + cont) % 2 != 0)
+                    {
+                        soma += (x + cont);
+                        totalImpar++;
+                    }
+                    cont++;
+
+                } while (totalImpar < y);
+                WriteLine(soma);
+
+                soma = 0; totalImpar = 0; cont = 0;
+            }
         }
         static void Exercice1157()
         {
@@ -72,14 +103,21 @@ namespace Exercice1145
 
         static void Exercice1156()
         {
-            int numerador = 1;
-            int denominador = 3;
-            double soma = 0;
+            double numerador = 3.0;
+            double denominador = 2.0;
+            double soma = 1.0;
+            double calculo = 0.0;
 
-            for ()
+            while (numerador <= 39)
             {
-                
+                calculo = (numerador / denominador);
+                soma = soma + calculo;
+                numerador += 2.0;
+                denominador *= 2.0;
+                calculo = 0.0;
             }
+
+            WriteLine($"Soma = " + soma.ToString("F2", CultureInfo.InvariantCulture));
         }
         static void Exercice1155()
         {
