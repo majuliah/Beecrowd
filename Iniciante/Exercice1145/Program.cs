@@ -48,12 +48,11 @@ namespace Exercice1145
             // Exercice1160();
             
             //Exercice1164
-            Exercice1164();            
+            //Exercice1164();            
             
             //Exercice1165
             //Exercice1165();
         }
-
 
         static void Exercice1165()
         {
