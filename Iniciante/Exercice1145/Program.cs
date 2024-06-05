@@ -48,10 +48,10 @@ namespace Exercice1145
             // Exercice1160();
             
             //Exercice1164
-            // Exercice1164();            
+            Exercice1164();            
             
             //Exercice1165
-             Exercice1165();
+            //Exercice1165();
         }
 
 
@@ -81,7 +81,26 @@ namespace Exercice1145
         
         static void Exercice1164()
         {
-            WriteLine("Do it tomorrow");
+            int testes = int.Parse(ReadLine());
+            int numero = 0;
+            int soma = 0;
+
+            for (int i = 0; i < testes; i++)
+            {
+                soma = 0;
+                numero = int.Parse(ReadLine());
+
+                for (int j = 1; j < numero; j++)
+                {
+                    if (numero % j == 0)
+                        soma += j;
+                }
+
+                if (soma == numero)
+                    WriteLine($"{numero} eh perfeito");
+                else
+                    WriteLine($"{numero} nao eh perfeito");
+            }
         }            
         
         static void Exercice1160()
