@@ -42,16 +42,51 @@ namespace Exercice1145
             //Exercice1158();
 
             //Exercice1159
-            Exercice1159();
+            // Exercice1159();
 
             //Exercice1160
             // Exercice1160();
+            
+            //Exercice1164
+            // Exercice1164();            
+            
+            //Exercice1165
+             Exercice1165();
         }
 
 
+        static void Exercice1165()
+        {
+            int numero = 0;
+            int totalNumeros = 0;
+            int testes = int.Parse(ReadLine());
+
+            for (int i = 0; i < testes; i++)
+            {
+                totalNumeros = 0;
+                numero = int.Parse(ReadLine());
+                
+                for(int j = 1; j <= numero; j++)
+                {
+                    if (numero % j == 0)
+                        totalNumeros++;
+                }
+                
+                if (numero == 2 || totalNumeros == 2) 
+                    WriteLine($"{numero} eh primo");
+                else
+                    WriteLine($"{numero} nao eh primo");
+            }
+        }            
+        
+        static void Exercice1164()
+        {
+            WriteLine("Do it tomorrow");
+        }            
+        
         static void Exercice1160()
         {
-            WriteLine("Nome");
+            WriteLine("Do it tomorrow");
         }            
         static void Exercice1159()
         {
