@@ -42,7 +42,7 @@ namespace Exercice1145
             //Exercice1158();
 
             //Exercice1159
-            //Exercice1159();
+            Exercice1159();
 
             //Exercice1160
             // Exercice1160();
@@ -55,7 +55,35 @@ namespace Exercice1145
         }            
         static void Exercice1159()
         {
-            WriteLine("Nome");
+            
+            int soma = 0;
+            int contador = 0;
+            int totalPar = 0;
+
+            int saida = int.Parse(ReadLine());
+            if (saida != 0) 
+            {
+                do
+                {
+                    do
+                    {
+                        if ((saida + contador) % 2 == 0)
+                        {
+                            soma += saida + contador;
+                            totalPar++;
+                        }
+                        contador++;
+
+                    } while (totalPar < 5);
+
+                    WriteLine(soma);
+                    contador = 0;
+                    totalPar = 0;
+                    soma = 0;
+                    saida = int.Parse(ReadLine());
+                } while (saida != 0);
+            }
+            
         }        
         static void Exercice1158()
         {
@@ -100,7 +128,6 @@ namespace Exercice1145
                     WriteLine(i);
             }
         }
-
         static void Exercice1156()
         {
             double numerador = 3.0;
