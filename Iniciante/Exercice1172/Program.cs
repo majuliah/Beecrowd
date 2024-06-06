@@ -22,8 +22,42 @@ namespace Exercice1172
 
             //Exercice1180
             //Exercice1180();
+
+            //Exercice1177
+            Exercice1177();
         }
 
+
+        static void Exercice1177()
+        {
+            int entrada = 0;
+            do
+            {
+                entrada = int.Parse(ReadLine());
+            } while (entrada < 2 || entrada > 50);
+
+            int[] vetorValores = new int[entrada];
+            for (int i = 0; i < vetorValores.Length; i++)
+                vetorValores[i] = i;            
+            
+
+            int[] vetorSequencia = new int[1000];
+            int contador = 0;
+            for (int i = 0; i < vetorSequencia.Length; i = contador)
+            {
+                for (int j = 0; j < entrada; j++)
+                {
+                    if (contador < vetorSequencia.Length) 
+                    {
+                        vetorSequencia[contador] = vetorValores[j];
+                        contador++;
+                    }
+                }
+            }
+
+            for (int i = 0; i < vetorSequencia.Length; i++)
+                WriteLine($"N[{i}] = {vetorSequencia[i]}");           
+        }
         static void Exercice1180()
         {
             int tamanhoVetor = int.Parse(ReadLine());
