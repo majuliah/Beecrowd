@@ -23,8 +23,11 @@ namespace Exercice1172
             //Exercice1180
             //Exercice1180();
 
+            //Exercice1176
+            Exercice1176();
+
             //Exercice1177
-            Exercice1177();
+            //Exercice1177();
         }
 
 
@@ -57,6 +60,37 @@ namespace Exercice1172
 
             for (int i = 0; i < vetorSequencia.Length; i++)
                 WriteLine($"N[{i}] = {vetorSequencia[i]}");           
+        }
+        static void Exercice1176()
+        {
+            int aux = 0; int posicaoUm = 0; int posicaoDois = 1;
+            int[] Fibonnaci = new int[60];
+
+            for(int i = 0; i < Fibonnaci.Length; i++)
+            {
+                Fibonnaci[i] = posicaoUm;
+                aux = posicaoUm;
+                posicaoUm = posicaoDois;
+                posicaoDois = aux + posicaoUm;
+            }
+             
+            int casosDeTeste = int.Parse(ReadLine());
+            int posicaoVerificar = 0;
+
+            for (int i = 0; i < casosDeTeste; i++)
+            {
+                do
+                {
+                    posicaoVerificar = int.Parse(ReadLine());
+                } while (posicaoVerificar < 0 || posicaoVerificar > 60);
+
+                WriteLine($"Fib() = ");
+
+            }
+
+
+
+
         }
         static void Exercice1180()
         {
